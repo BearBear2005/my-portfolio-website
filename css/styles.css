@@ -330,27 +330,39 @@ a .fa-brands:hover {
   border-radius: 20px;
 }
 
-/* STATUS CONTAINER */
 .status-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2rem auto;
+  padding-left: 2rem;
+  border-left: 4px solid #8B5E3C;
+  max-width: 600px;
 }
 
-/* STATUS ITEMS */
 .status-item {
-  font-size: 1.3rem;
+  position: relative;
+  padding: 1rem 1rem 1rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #fff7e0;
+  border-radius: 10px;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-size: 1.1rem;
   color: #4E5D2A;
-  background-color: #e6d7ab;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  max-width: 300px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
+
+.status-item::before {
+  content: "";
+  position: absolute;
+  left: -1.15rem;
+  top: 1rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #8B5E3C;
+  border-radius: 50%;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
